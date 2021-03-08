@@ -1,0 +1,22 @@
+
+#wrapper{
+  overflow:auto;
+
+
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman";
+  width: 100%;
+  font-size: 20px;
+
+}
+
+
+#c1{
+  float: top;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+
+

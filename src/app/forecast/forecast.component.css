@@ -1,0 +1,40 @@
+form.f
+{
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman";
+  width: 100%;
+  font-size: 25px;
+  padding-left: 40%;
+  padding-right: 40%;
+
+
+
+}
+
+p.result
+{
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman";
+  width: 100%;
+  background-color: lightyellow;
+
+}
+
+h2{
+  color: black;
+  font-size: 25px;
+
+}
+
+div.error{
+  color: red;
+  font-size: 15px;
+
+}
+label.hig{
+
+  text-align: justify-all;
+
+}

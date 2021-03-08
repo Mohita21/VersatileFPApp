@@ -1,0 +1,8 @@
+.chart-wrapper{
+  width: 50%;
+  height:500px;
+  float: left;
+  background-color: lightgoldenrodyellow;
+
+  min-width: 50%;
+}

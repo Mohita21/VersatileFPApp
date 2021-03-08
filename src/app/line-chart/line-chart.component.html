@@ -1,0 +1,16 @@
+<div class="chart-wrapper">
+  <!---<button (click)="getchart()" >Graph for Missing Values</button>--->
+
+  <div *ngIf="flag" style="display: grid; "  >
+    <p>Graph for Missing Values</p>
+  <canvas baseChart
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins">
+  </canvas>
+</div>
+</div>

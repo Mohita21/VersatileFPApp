@@ -1,0 +1,36 @@
+header
+{
+
+  text-align: center;
+  font-family: "Times New Roman";
+  font-size: 30px;
+
+}
+
+p.result
+{
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman";
+  width: 100%;
+  background-color: lightyellow;
+
+}
+
+h2{
+  color: black;
+  font-size: 25px;
+
+}
+
+div.error{
+  color: red;
+  font-size: 15px;
+
+}
+section.hig{
+font-size: 20px;
+  padding-right: 40%;
+  padding-left: 40%;
+
+}

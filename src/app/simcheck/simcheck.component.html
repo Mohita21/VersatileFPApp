@@ -1,0 +1,18 @@
+<header>
+  <h2 style="color: #000000" >Upload files for similarity check</h2>
+</header>
+<section class="hig">
+
+    <div>
+      <Ngx-CSVtoJSON (onConvert)="convert($event)" (onFail)="onError($event)"></Ngx-CSVtoJSON>
+      <Ngx-CSVtoJSON (onConvert)="convert($event)"  (onFail)="onError($event)"></Ngx-CSVtoJSON>
+      <Ngx-CSVtoJSON (onConvert)="convert($event)" *ngIf="flag" (onFail)="onError($event)"></Ngx-CSVtoJSON>
+
+
+    </div>
+  <button type="" class="btn btn-success" (click)="addfiles()">Add file</button><br><br>
+
+
+    <button type="submit" class="btn btn-success" >submit</button>
+
+</section>

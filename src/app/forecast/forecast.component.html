@@ -1,0 +1,105 @@
+
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)" class="f">
+  <br>
+
+
+
+  <li>
+    <label class="hig" for="ft">Forecast Type</label >
+    <select name="Forecast Type" id="ft" formControlName="ft">
+      <option value="Price">Price</option>
+      <option value="Yield">Yield</option>
+    </select>
+    <div *ngIf="form.get('ft').errors as ftErrors" class="error">
+      *This is a required field.
+    </div>
+  </li>
+  <li>
+    <label class="hig" for="mt">Method</label >
+    <select name="Forecast Type" id="mt" formControlName="mt">
+      <option value="Satellite">Satellite Based</option>
+      <option value="Station">Station Based</option>
+      <option value="Combined">Combined</option>
+    </select>
+    <div *ngIf="form.get('mt').errors as mtErrors" class="error">
+      *This is a required field.
+    </div>
+  </li>
+  <li>
+    <label class="hig"  for="wa">Horizon</label>
+    <select name="Weeks Ahead" id="wa" formControlName="wa">
+      <option value="0.5">1 day ahead</option>
+      <option value="1">1 weeks ahead</option>
+      <option value="2">2 weeks ahead</option>
+      <option value="3">3 weeks ahead</option>
+      <option value="4">4 weeks ahead</option>
+      <option value="5">5 weeks ahead</option>
+    </select>
+    <div *ngIf="form.get('wa').errors as waErrors" class="error">
+      *This is a required field.
+    </div>
+  </li>
+  <li>
+    <label class="hig" for="mt">Fresh Produce</label >
+    <select name="Fresh Produce" id="fp" formControlName="fp">
+      <option value="Strawberry">Strawberry</option>
+      <option value="Raspberry">Raspberry</option>
+      <option value="Blueberry">Blueberry</option>
+      <option value="other">other</option>
+    </select>
+
+    <div *ngIf="form.get('fp').errors as fpErrors" class="error">
+      *This is a required field.
+    </div>
+    <div *ngIf="form.get('fp').value=='other'">
+      <Ngx-CSVtoJSON (onConvert)="convert($event)" (onFail)="onError($event)"></Ngx-CSVtoJSON><br>
+
+    </div>
+  </li>
+
+  <li>
+    <label class="hig" for="co">County</label >
+    <select name="County" id="co" formControlName="co">
+      <option value="Santa Maria">Santa Maria</option>
+      <option value="Oxnard">Oxnard</option>
+      <option value="other">other</option>
+    </select>
+    <div *ngIf="form.get('co').errors as coErrors" class="error">
+      *This is a required field.
+    </div>
+    <div *ngIf="form.get('co').value=='other' && (form.get('mt').value=='Station' ||  form.get('mt').value=='Combined')" >
+      <Ngx-CSVtoJSON (onConvert)="convert($event)" (onFail)="onError($event)" ></Ngx-CSVtoJSON><br>
+    </div>
+  </li>
+
+
+  <li>
+    <label class="hig" for="sd">Start Date</label>
+    <input type="date" name="Start Date" id="sd" formControlName="sd">
+    <div *ngIf="form.get('sd').errors as dateErrors" class="error">
+      *This date should be after 20 May 2011.
+    </div>
+  </li>
+  <li>
+    <label class="hig" for="ed">End Date</label>
+    <input type="date" name="End Date" id="ed"  formControlName="ed">
+    <div *ngIf="form.get('ed').errors as dateErrors" class="error">
+      *This date should be before today.
+    </div>
+  </li>
+  <br>
+
+  <button type="submit" class="btn btn-success" [disabled]="!form.valid">Save</button>
+  <br>
+
+
+
+</form>
+
+<p style="word-wrap: break-word; " class="p">{{result['result']}}</p>
+<script src="node_modules/chart.js/dist/Chart.js"></script>
+<app-my-bar-chart *ngIf="result"></app-my-bar-chart>
+
+
