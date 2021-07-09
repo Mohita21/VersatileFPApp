@@ -4,11 +4,14 @@ The code for this Application is in two different repositories:
 1. [Front End Angular CLI Application Code](https://github.com/Mohita21/VersatileFPApp)
 2. [Back End Flask Application Code](https://github.com/Mohita21/Application_Backend)
 
+## Installation
+Install any IDE like PyCharm or Visual Studio Code to run the python fiels for serving the 
+flask application backend code.
 
 # Front End Angular CLI Application
 This front end project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7. This project has the front-end code for the application, **Web Portal for AI-based Tools for
 Fresh Produce Procurement Price Forecasting**.
-## Description
+### Description
 This project has the following components:
 - Yield: The component for forecasting yield.
 - Price: The component for forecasting price.
@@ -16,26 +19,12 @@ This project has the following components:
 - interpolation: The component for imputation of time series.
 - linechart: The component for generating line chart on the web page.
 - credits: The component for displaying credits.
-## Development server
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-
-
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Usage
+### Usage
 
 
 Usage Case | Demonstration |
@@ -49,12 +38,11 @@ Forecasting Raspberry yield 2 weeks ahead in Santa Maria 1st July – 15th July 
 Forecasting Raspberry yield 3 weeks ahead in Santa Maria 1st July – 21st July 2019 using the Combined model (transfer learning is applied) | [DEMO](https://drive.google.com/file/d/1hAXYftOst2uNwX9Ga0gw3rpWtX7aQcCO/view?usp=sharing) |
 Forecasting Blueberry yield 3 weeks ahead in Santa Maria 1st July – 21st July 2019 using the Satellite images model | [DEMO](https://drive.google.com/file/d/1pdedRBak-u3F1N1fPRfL8qfmaQ83j9Vq/view?usp=sharing) |
 
-# Backend Code for Forecasting Application
+# Back End Flask Application Code
 
-## Description
-This application has the backend code for the Angular Application named 
-**Web Portal for AI-based Tools for
-Fresh Produce Procurement Price Forecasting**. This application has two main functionalities:
+### Description
+This part of code has the backend code for the Angular Application named 
+**Web Portal for AI-based Tools for Fresh Produce Procurement Price Forecasting**. This application has two main functionalities:
 - Data Preprocessing
 - Forecasting
 
@@ -69,11 +57,7 @@ Fresh Produce Procurement Price Forecasting**. This application has two main fun
   
 
 
-## Installation
-Install any IDE like PyCharm or Visual Studio Code to run the python fiels for serving the 
-flask application backend code.
-
-## Usage
+### Running the code
 Run the *FlaskApp_Main.py* file in the Application folder to serve the Flask Application.
 
 ##### Directories
