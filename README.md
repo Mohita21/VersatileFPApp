@@ -33,7 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 Usage Case | Demonstration |
---- | --- | 
+|
 Accessing the web application main modules and their sub function | [DEMO](https://drive.google.com/file/d/1-qq7tB_gRA5vKEoJI1UaYQXC80P4fnnA/view?usp=sharing) | 
 |
 Imputing data files with random missing values and missing chunks | [DEMO](https://drive.google.com/file/d/1Wuf2P1eDXZap-0SHWL1T-ktGSOB_UAa4/view?usp=sharing) | 
