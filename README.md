@@ -10,7 +10,7 @@ The code for this Application is in two different repositories:
 
 
 
-### Front End Angular CLI Application
+#### Front End Angular CLI Application
 This front end project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7. This project has the front-end code for the application, **Web Portal for AI-based Tools for Fresh Produce Procurement Price Forecasting**.
 
 This project has the following components:
@@ -20,11 +20,11 @@ This project has the following components:
 - interpolation: The component for imputation of time series.
 - linechart: The component for generating line chart on the web page.
 - credits: The component for displaying credits.
-### Development server
+**Development Server**
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
-### Back End Flask Application Code
+#### Back End Flask Application Code
 
 This part of code has the backend code for the Angular Application named 
 **Web Portal for AI-based Tools for Fresh Produce Procurement Price Forecasting**. This application has two main functionalities:
@@ -41,10 +41,10 @@ This part of code has the backend code for the Angular Application named
 
   
 
-### Running the code
+**Running the code**
 Run the *FlaskApp_Main.py* file in the Application folder to serve the Flask Application.
 
-##### Directories
+**Directories**
 - Application: This has the main python file *FlaskApp_Main.py* for running the code.
 - Data: This folder has the different datasets used for training and similarity check in the backend.
 - Imputation: This folder has codes required for Imputation.
