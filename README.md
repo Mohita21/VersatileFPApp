@@ -41,7 +41,7 @@ This part of code has the backend code for the Angular Application named
 
   
 
-**Running the code**
+**Running the code:**
 Run the *FlaskApp_Main.py* file in the Application folder to serve the Flask Application.
 
 **Directories**
