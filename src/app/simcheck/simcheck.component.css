@@ -1,36 +1,33 @@
-header
-{
-
-  text-align: center;
-  font-family: "Times New Roman";
-  font-size: 30px;
-
-}
-
-p.result
+h2.c1
 {
   display: block;
   text-align: center;
   font-family: "Times New Roman";
-  width: 100%;
-  background-color: lightyellow;
-
-}
-
-h2{
-  color: black;
   font-size: 25px;
+  font-style: normal;
+  clear: both;
 
 }
-
-div.error{
-  color: red;
-  font-size: 15px;
-
+form.c1{
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman";
+  font-size: 25px;
+  font-style: normal;
+  clear: both;
 }
+
+
+
+
+
+
+
 section.hig{
-font-size: 20px;
+font-size: 25px;
   padding-right: 40%;
   padding-left: 40%;
+  text-align: center;
 
 }
+

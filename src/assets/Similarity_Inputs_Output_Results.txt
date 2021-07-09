@@ -1,0 +1,72 @@
+**Effective Lag-time of Predictors as a Result of the Interstage_Dependency_Analysis** 
+
+y1
+                    Soil Temperature Soil Moisture
+Best_daily_lag                195.00        165.00
+Best_monthly_lag                6.00          6.00
+Maximum_correlation            -0.78          0.68
+
+ 
+
+y2
+                    Soil Temperature Soil Moisture
+Best_daily_lag                140.00        100.00
+Best_monthly_lag                5.00          3.00
+Maximum_correlation            -0.71          0.63
+
+ 
+
+**Effective Predictors as a Result Feature Selection Approach** 
+
+Scenario 1: Maximum Accuracy with the Least Number of Predictors
+
+ FP_type: y1 
+ Best_features: Index(['Soil Temperature'], dtype='object') 
+ Effective_daily_lag: 195.0 
+ Effective_monthly_lag: 6.0
+
+ FP_type: y2 
+ Best_features: Index(['Soil Temperature'], dtype='object') 
+ Effective_daily_lag: 140.0 
+ Effective_monthly_lag: 5.0
+
+ y1
+R-square value on test data for Scenario 1:  0.60 
+R-square value on train data for Scenario 1:  0.66 
+
+ y2
+R-square value on test data for Scenario 1:  0.52 
+R-square value on train data for Scenario 1:  0.53 
+
+ 
+ Scenario 2: Maximum Accuracy
+
+ FP_type: y1 
+ Best_features: Index(['Soil Temperature', 'Soil Moisture'], dtype='object') 
+ Effective_daily_lag: 180.0 
+ Effective_monthly_lag: 6.0
+
+ FP_type: y2 
+ Best_features: Index(['Soil Temperature', 'Soil Moisture'], dtype='object') 
+ Effective_daily_lag: 120.0 
+ Effective_monthly_lag: 4.0
+
+ y1
+R-square value on test data for Scenario 2:  0.66 
+R-square value on train data for Scenario 2:  0.69 
+
+ y2
+R-square value on test data for Scenario 2:  0.44 
+R-square value on train data for Scenario 2:  0.57 
+
+ +----------------------------+----------------------------+
+|                            |   Percentage of Similarity |
+|----------------------------+----------------------------|
+| Average_Linear_correlation |                       70   |
+| Effective_Lag_time         |                       92.5 |
+| Effective_Predictors       |                       78   |
++----------------------------+----------------------------+
+
+ Overal Similarity Percentage = 78.00 
+
+ The investigated y1 and y2 are similar.

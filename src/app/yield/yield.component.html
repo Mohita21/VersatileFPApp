@@ -9,41 +9,41 @@
       <p style="font-style: normal;font-size: 25px;text-align: justify-all;clear: both;">All fields are required.<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span> </p>
     </div>
     <div class="column" >
-      <button type="submit" class="btn btn-success" [disabled]="!form.valid" style="text-align: center; display: block; background-color: steelblue">Submit</button>
+      <!--<button type="submit" class="btn btn-success" [disabled]="!form.valid" style="text-align: center; display: block; background-color: steelblue">Submit</button>-->
+      <button type="submit" class="btn btn-success"  style="text-align: center; display: block; background-color: steelblue">Submit</button>
     </div>
   </div>
-    <label  class="hig" for="ft" >Forecast Type  <span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp; </label >
-    <select name="Forecast Type" id="ft" formControlName="ft" style="width: 200px; height: 75%">
-      <option value="Price">Price</option>
-      <option value="Yield">Yield</option>
-    </select>
-    <!--<div *ngIf="form.get('ft').errors as ftErrors" class="error">
-      *This is a required field.
-    </div>-->
+  <label  class="hig" for="ft" >Forecast Type  <span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp; </label >
+  <select name="Forecast Type" id="ft" formControlName="ft" style="width: 200px; height: 75%">
+    <option value="Yield">Yield</option>
+  </select>
+  <!--<div *ngIf="form.get('ft').errors as ftErrors" class="error">
+    *This is a required field.
+  </div>-->
   <br>
-    <label   class="hig" for="mt">Forecasting Method  &nbsp;&nbsp;</label >
-    <select name="Forecast Type" id="mt" formControlName="mt" style="width: 200px; height: 75%">
-      <option value="Satellite">Satellite Based</option>
-      <option value="Station">Station Based</option>
-      <option value="Combined">Combined</option>
-    </select>
-    <!--<div *ngIf="form.get('mt').errors as mtErrors" class="error">
-      *This is a required field.
-    </div>-->
+  <label   class="hig" for="mt">Forecasting Method  &nbsp;&nbsp;</label >
+  <select name="Forecast Type" id="mt" formControlName="mt" style="width: 200px; height: 75%">
+    <option value="Satellite">Satellite Based</option>
+    <option value="Station">Station Based</option>
+    <option value="Combined">Combined</option>
+  </select>
+  <!--<div *ngIf="form.get('mt').errors as mtErrors" class="error">
+    *This is a required field.
+  </div>-->
   <br>
 
-    <label  class="hig"  for="wa">Horizon<span class="tab"></span><span class="tab"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <select name="Weeks Ahead" id="wa" formControlName="wa" style="width: 200px; height: 75%">
-      <option value="0.5">1 day ahead</option>
-      <option value="1">1 weeks ahead</option>
-      <option value="2">2 weeks ahead</option>
-      <option value="3">3 weeks ahead</option>
-      <option value="4">4 weeks ahead</option>
-      <option value="5">5 weeks ahead</option>
-    </select>
-    <!--<div *ngIf="form.get('wa').errors as waErrors" class="error">
-      *This is a required field.
-    </div>-->
+  <label  class="hig"  for="wa">Horizon<span class="tab"></span><span class="tab"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <select name="Weeks Ahead" id="wa" formControlName="wa" style="width: 200px; height: 75%">
+    <option value="0.5">1 day ahead</option>
+    <option value="1">1 weeks ahead</option>
+    <option value="2">2 weeks ahead</option>
+    <option value="3">3 weeks ahead</option>
+    <option value="4">4 weeks ahead</option>
+    <option value="5">5 weeks ahead</option>
+  </select>
+  <!--<div *ngIf="form.get('wa').errors as waErrors" class="error">
+    *This is a required field.
+  </div>-->
   <br>
 
   <label  class="hig" for="co">County<span class="tab"></span><span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label >
@@ -53,26 +53,26 @@
   </select>
 
   <br>
-    <label  class="hig" for="mt">Fresh Produce<span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;</label >
-    <select name="Fresh Produce" id="fp" formControlName="fp" style="width: 200px; height: 75%">
-      <option value="Strawberry">Strawberry</option>
-      <option value="other">other</option>
-    </select>
+  <label  class="hig" for="mt">Fresh Produce<span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;</label >
+  <select name="Fresh Produce" id="fp" formControlName="fp" style="width: 200px; height: 75%">
+    <option value="Strawberry">Strawberry</option>
+    <option value="other">other</option>
+  </select>
 
-    <!--<div *ngIf="form.get('fp').errors as fpErrors" class="error">
-      *This is a required field.
-    </div>-->
+  <!--<div *ngIf="form.get('fp').errors as fpErrors" class="error">
+    *This is a required field.
+  </div>-->
 
   <br>
 
   <div *ngIf="form.get('co').value=='other' && (form.get('mt').value=='Satellite' ||  form.get('mt').value=='Combined') && form.get('ft').value=='Yield'" >
-    <label class="hig" for="fips">FIPS Code<a  target="_blank" style="color: gold">&nbsp;!</a><span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <label class="hig" for="fips">FIPS Code<a  target="_blank" style="color: whitesmoke">&nbsp;!</a><span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <input type="text" name="Fips Code" id="fips"  formControlName="fips" style="width: 200px; height: 75%">
     <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697" target="_blank" style="color: black; font-size: smaller;">&nbsp;&#9432;</a>
 
   </div>
   <div *ngIf="form.get('co').value=='other' && (form.get('mt').value=='Satellite' ||  form.get('mt').value=='Combined') && form.get('ft').value=='Price'" >
-    <label class="hig" for="fips">FIPS Code<a target="_blank" style="color: gold">&nbsp;!</a><span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <label class="hig" for="fips">FIPS Code<a target="_blank" style="color: whitesmoke">&nbsp;!</a><span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <input type="text" name="Fips Code" id="fips"  formControlName="fips" style="width: 200px; height: 75%">
     <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697" target="_blank" style="color: black;font-size: smaller;">&nbsp; &#9432;</a>
 
@@ -81,17 +81,17 @@
 
 
 
-    <label class="hig" for="sd">Start Date<span class="tab"></span><span class="tab"></span>&nbsp;&nbsp;&nbsp;</label>
-    <input type="date" name="Start Date" id="sd" formControlName="sd" style="width: 200px; height: 75%">
-    <div *ngIf="form.get('sd').errors as dateErrors" class="error">
-      *This date should be after 20 May 2011.
-    </div>
+  <label class="hig" for="sd">Start Date<span class="tab"></span><span class="tab"></span>&nbsp;&nbsp;&nbsp;</label>
+  <input type="date" name="Start Date" id="sd" formControlName="sd" style="width: 200px; height: 75%">
+  <div *ngIf="form.get('sd').errors as dateErrors" class="error">
+    *This date should be after 20 May 2011.
+  </div>
   <br>
-    <label class="hig" for="ed">End Date<span class="tab"></span><span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input type="date" name="End Date" id="ed"  formControlName="ed" style="width: 200px; height: 75%">
-    <div *ngIf="form.get('ed').errors as dateErrors" class="error">
-      *This date should be before today.
-    </div>
+  <label class="hig" for="ed">End Date<span class="tab"></span><span class="tab"></span>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="date" name="End Date" id="ed"  formControlName="ed" style="width: 200px; height: 75%">
+  <div *ngIf="form.get('ed').errors as dateErrors" class="error">
+    *This date should be before today.
+  </div>
 
   <p>Start Date and End Date should be within the horizon</p>
 
@@ -136,7 +136,7 @@
 <p style="word-wrap: break-word; " class="p" *ngIf="form.get('sd').value==form.get('ed').value && form.get('ft').value=='Yield'" >Forecasted Yield: {{result['result']}}&nbsp; Pounds/Acre</p>
 <p style="word-wrap: break-word; " class="p" *ngIf="form.get('sd').value==form.get('ed').value && form.get('ft').value=='Price'" >Forecasted Price: {{result['result']}}&nbsp;USD</p>
 
-<br>
+
 
 <div class="result" *ngIf="flag_retrain" >
 
@@ -162,7 +162,7 @@
   <p><span style="color: red; font-style: oblique">{{percentage_similarity2}}% </span>similarity is found with available county </p>
   <p>No retraining is required. </p>
   <p *ngIf="!result || !flag2"> Transfer Learning is being processed...</p>
-  <mat-progress-spinner *ngIf="!result || !flag2" mode="indeterminate"  style="display:inline-block;background-color:lightgoldenrodyellow; align-content: center"></mat-progress-spinner>
+  <mat-progress-spinner *ngIf="!result || !flag2" mode="indeterminate"  style="display:inline-block;background-color:whitesmoke; align-content: center"></mat-progress-spinner>
 
 </div>
 

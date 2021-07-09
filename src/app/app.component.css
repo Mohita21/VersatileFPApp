@@ -8,88 +8,101 @@ h1{
 }
 p{
   color: black;
-  font-style: italic;
   text-align: center;
 }
 body{
   width: 100%;
-  background-color: gold;
+  background-color: whitesmoke;
   min-height: 200%;
   margin: 0;
-  font-style: italic;
-  font-family: "Times New Roman";
+  font-family: "Calibri";
   font-size: 22px;
   color: black;
-
-
-
-}
-
-
-.head-navbar{
-  color: black;
-  font-size: 25px;
-  text-align: center;
-
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: goldenrod;
-  font-family: "Times New Roman";
-}
-
-li {
-  float: left;
-
-}
-
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: white;
-;
-}
-
-#para{
-  text-align: center;
-  background-color: lightsteelblue;
-  padding: 30px ;
-}
-section.des{
-  font-style: italic;
-  font-family: "Times New Roman";
-  font-size: 22px;
-  margin: 0px;
-  width: 100%;
-  background-image: url('./FP.jpg');
-  min-height: 100%;
-  padding-bottom: 25%;
-
 }
 
 footer.foot{
 
   float: top;
-  background-color: goldenrod;
+  background-color: #87CEFA;
   width: 100%;
   padding-bottom: 1% ;
 }
 
 html {
-
-  /* To make use of full height of page*/
   min-height: 100%;
   margin: 0;
+}
+#para{
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 30px ;
+}
+
+section.de{
+
+  font-family: "Calibri";
+  font-size: 22px;
+text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+
+
 
 }
+
+
+
+div.bar {background-color:  #87CEFA;}
+div a {
+  text-decoration: none;
+  color: black;
+  display:inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  font-weight: bold;
+}
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background: white;}
+ul li:hover ul {display: block;}
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+  background: white;
+}
+ul li ul li {
+  background: #ddd;
+  display: block;
+  width:277px;margin:0 auto;
+}
+ul li ul li a {display:block !important;}
+ul li ul li:hover {background: white;}
+
+a:hover{background: white;}
+
+
+
+{
+  box-sizing: border-box;
+}
+/* Set additional styling options for the columns*/
+div.column {
+  float: left;
+  width: 50%;
+
+}
+
+div.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 

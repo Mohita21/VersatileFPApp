@@ -93,6 +93,16 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*", "input": "/Users/mohita/Documents/GitHub/VersatileFPApp/src/File", "output": "./assets/",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/",
+                "output": "/assets/"
+              }
+            ],
+
             "scripts": []
           }
         },

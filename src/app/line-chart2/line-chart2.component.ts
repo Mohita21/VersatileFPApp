@@ -37,7 +37,8 @@ export class LineChart2Component implements OnInit {
   constructor(private appItemService: AppItemService) { }
 
   ngOnInit(): void {
-    this.appItemService.currentData.subscribe( message => this.result = message); console.log(this.result);
+    this.appItemService.currentData.subscribe( message => this.result = message);
+    console.log(this.result);
     console.log(this.result.message);
     for (let step = 0; step < this.result.message.length; step++){
       this.lab.push(step);

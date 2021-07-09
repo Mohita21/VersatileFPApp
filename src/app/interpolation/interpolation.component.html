@@ -1,31 +1,35 @@
 
-<div id="wrapper"><br>
+
+<br>
+<div style="padding-left: 85%">
+  <button  type="button" class="btn btn-success" (click)="savefile()" style="text-align: right; background-color: steelblue">Impute</button>
+
+</div>
+<h2 class="c1">Upload the file for imputation (.csv) </h2>
+
 
   <div id="c1">
-    <h5 style="font-size: 30px">Upload csv file here </h5>
+
     <Ngx-CSVtoJSON (onConvert)="convert($event)" (onFail)="onError($event)"></Ngx-CSVtoJSON><br>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-      <label class="form-check-label" for="exampleRadios1">
-        Multivariate
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-      <label class="form-check-label" for="exampleRadios2">
-        Univariate
-      </label><br><br>
-      <p style="padding-bottom: 1%">
-        <button *ngIf="flag" type="button" class="btn btn-success" (click)="savefile()">Impute</button>
-      </p>
-
-      <br>
-      <mat-progress-spinner *ngIf="flag3" mode="indeterminate"  style="display:inline-block;background-color:lightgoldenrodyellow; align-content: center"></mat-progress-spinner>
 
 
-    </div>
+
+
+
 
   </div>
+<p *ngIf="analysis && flag4" style="padding-left: 34%; font-size: x-large">The uploaded time series has&nbsp;<span style="font-weight: bold">{{analysis.type}}</span></p>
+<p *ngIf="analysis && flag5" style="padding-left: 34%; font-size: x-large">The uploaded time series has&nbsp;<span style="font-weight: bold">chunks</span></p>
+<br>
+<p *ngIf="analysis && flag5" class="v1">Upload a complete similar time series (.csv)</p>
+<div id="c1">
+<Ngx-CSVtoJSON (onConvert)="convert2($event)" (onFail)="onError($event)" *ngIf="analysis && flag5"></Ngx-CSVtoJSON><br>
+</div>
+
+<p *ngIf="f" style="color: red; font-weight: bold;display:inline-block; align-content: center; padding-left: 15%">The uploaded file is incomplete</p>
+
+<mat-progress-spinner *ngIf="flag3" mode="indeterminate"  style="display:inline-block; align-content: center; padding-left: 15%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-progress-spinner>
+
   <script src="node_modules/chart.js/dist/Chart.js"></script>
 
     <app-line-chart  *ngIf="flag && arr">
@@ -38,14 +42,13 @@
 
     </app-line-chart2>
 
-    <p style="padding-top: 14cm">
-    <button *ngIf="finalimputed && flag2"  type="button" class="btn btn-success" (click)="download()">Download Imputed File</button>
+
+    <p style="padding-top: 14cm;padding-left: 80%">
+    <button *ngIf="finalimputed && flag2"  type="button" class="btn btn-success" style="background-color: steelblue" (click)="download()">Download Imputed File</button>
     </p>
 
 
 
 
 
-
-</div>
 

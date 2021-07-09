@@ -20,11 +20,11 @@ const options = {
 const csvExporter = new ExportToCsv(options);
 
 @Component({
-  selector: 'app-forecast',
-  templateUrl: './forecast.component.html',
-  styleUrls: ['./forecast.component.css']
+  selector: 'app-price',
+  templateUrl: './price.component.html',
+  styleUrls: ['./price.component.css']
 })
-export class ForecastComponent implements OnInit {
+export class PriceComponent implements OnInit {
   form: FormGroup;
   result;
   // @ts-ignore
@@ -58,14 +58,14 @@ export class ForecastComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      ft: new FormControl('', Validators.required),
+      ft: new FormControl('Price', Validators.required),
       mt: new FormControl('', Validators.required),
       wa: new FormControl('', Validators.required),
       fp: new FormControl('', Validators.required),
       co: new FormControl('', Validators.required),
       sd: new FormControl(''),
       ed: new FormControl(''),
-    fips:  new FormControl('')});
+      fips:  new FormControl('')});
   }
   // tslint:disable-next-line:typedef
   // convert($event: any) {
@@ -110,15 +110,15 @@ export class ForecastComponent implements OnInit {
     // tslint:disable-next-line:triple-equals
     if (this.FP != 'other' && this.County != 'other'){
       this.appItemService.spredict(value).subscribe(message => {
-      this.result = message;
-      console.log(this.result);
-      this.appItemService.changeData(this.result);
-    });
+        this.result = message;
+        console.log(this.result);
+        this.appItemService.changeData(this.result);
+      });
       this.flag2 = true; }
     // tslint:disable-next-line:triple-equals
     if (this.FP == 'other' && this.County != 'other'){
       // tslint:disable-next-line:triple-equals
-      this.appItemService.SimilarOutput(this.arr).subscribe(message => {
+      this.appItemService.SimilarOutputPrice(this.arr).subscribe(message => {
         this.inp = message;
         console.log(this.inp);
         this.percentage_similarity = this.inp.message;
@@ -154,7 +154,7 @@ export class ForecastComponent implements OnInit {
     if (this.MT == 'Station' && this.County == 'other'){
       console.log(this.County);
       console.log(this.arr);
-      this.appItemService.SimilarOutput(this.arr).subscribe(message => {
+      this.appItemService.SimilarOutputPrice(this.arr).subscribe(message => {
         this.inp = message;
         console.log(this.inp);
         this.percentage_similarity = this.inp.message;
@@ -184,8 +184,6 @@ export class ForecastComponent implements OnInit {
         }
       });
 
-
-
     }
 
 
@@ -193,7 +191,7 @@ export class ForecastComponent implements OnInit {
     if ((this.MT == 'Satellite' ) && this.County == 'other'){
       console.log(this.County);
       console.log(this.arr);
-      this.appItemService.SimilarOutput(this.arr).subscribe(message => {
+      this.appItemService.SimilarOutputPrice(this.arr).subscribe(message => {
         this.inp = message;
         console.log(this.inp);
         this.percentage_similarity = this.inp.message;
@@ -222,7 +220,43 @@ export class ForecastComponent implements OnInit {
         }
       });
     }
+    // tslint:disable-next-line:triple-equals
+    if ((this.MT == 'Combined' ) && this.County == 'other'){
+      {
+        console.log(this.County);
+        console.log(this.arr);
+        this.appItemService.SimilarOutputPrice(this.arr).subscribe(message => {
+          this.inp = message;
+          console.log(this.inp);
+          this.percentage_similarity = this.inp.message;
+          this.similarity_message = this.inp.binary_value;
+          this.percentage_similarity2 = this.inp.message2;
+          this.similarity_message2 = this.inp.binary_value_ip;
+          // tslint:disable-next-line:triple-equals
+          if (this.similarity_message == '1' && this.similarity_message2 == '1'){ this.flag_ip_sim = true; }
+          // tslint:disable-next-line:triple-equals
+          if (this.similarity_message == '0' && this.similarity_message2 == '0'){ this.flag_ip_sim = false; }
+          this.appItemService.changeData(this.inp);
+          this.flag3 = false;
+          console.log(this.flag_ip_sim);
+          console.log(this.similarity_message);
+          if (this.flag_ip_sim){
+            value = [value, this.arr];
+            // tslint:disable-next-line:no-shadowed-variable
+            this.appItemService.TransferLearningIn(value).subscribe(message => {
+              this.result = message;
+              console.log(this.result);
+              this.appItemService.changeData(this.result);
+            });
+            this.flag2 = true; }
+          // tslint:disable-next-line:triple-equals
+          if (! this.flag_ip_sim){
+            this.flag_retrain = true;
+          }
+        });
 
+      }
+    }
 
   }
 

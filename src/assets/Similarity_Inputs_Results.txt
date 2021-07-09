@@ -1,0 +1,70 @@
+
+ 
+ # Percentage of Similarities for Unobserved components using Dynamic Time Warping Technique (Soil Temperature): 
+
+
+ ***** Distance Matrix for Observation *****
+                           County_1_Soil Temperature  County_2_Soil Temperature
+County_1_Soil Temperature                       0.00                       7.03
+County_2_Soil Temperature                       7.03                       0.00
+
+ ***** Distance Matrix for Trend *****
+                           County_1_Soil Temperature  County_2_Soil Temperature
+County_1_Soil Temperature                        0.0                        0.1
+County_2_Soil Temperature                        0.1                        0.0
+
+ ***** Distance Matrix for Seasonality *****
+                           County_1_Soil Temperature  County_2_Soil Temperature
+County_1_Soil Temperature                       0.00                       3.72
+County_2_Soil Temperature                       3.72                       0.00
+
+ ***** Distance Matrix for Residual *****
+                           County_1_Soil Temperature  County_2_Soil Temperature
+County_1_Soil Temperature                       0.00                       0.17
+County_2_Soil Temperature                       0.17                       0.00
+
+ 
+ +--------------------+-------------------------------------------------+
+|                    |   Percentage of Similarity for Soil Temperature |
+|--------------------+-------------------------------------------------|
+| Observation        |                                              90 |
+| Trend              |                                             100 |
+| Seasonality        |                                              90 |
+| Residual(Noise)    |                                             100 |
+| Linear Correlation |                                              90 |
++--------------------+-------------------------------------------------+
+
+ 
+ # Percentage of Similarities for Unobserved components using Dynamic Time Warping Technique (Soil Moisture): 
+
+
+ ***** Distance Matrix for Observation *****
+                        County_1_Soil Moisture  County_2_Soil Moisture
+County_1_Soil Moisture                    0.00                   21.73
+County_2_Soil Moisture                   21.73                    0.00
+
+ ***** Distance Matrix for Trend *****
+                        County_1_Soil Moisture  County_2_Soil Moisture
+County_1_Soil Moisture                    0.00                   17.43
+County_2_Soil Moisture                   17.43                    0.00
+
+ ***** Distance Matrix for Seasonality *****
+                        County_1_Soil Moisture  County_2_Soil Moisture
+County_1_Soil Moisture                    0.00                    5.68
+County_2_Soil Moisture                    5.68                    0.00
+
+ ***** Distance Matrix for Residual *****
+                        County_1_Soil Moisture  County_2_Soil Moisture
+County_1_Soil Moisture                    0.00                   15.88
+County_2_Soil Moisture                   15.61                    0.00
+
+ 
+ +--------------------+----------------------------------------------+
+|                    |   Percentage of Similarity for Soil Moisture |
+|--------------------+----------------------------------------------|
+| Observation        |                                           80 |
+| Trend              |                                           85 |
+| Seasonality        |                                           90 |
+| Residual(Noise)    |                                           85 |
+| Linear Correlation |                                           89 |
++--------------------+----------------------------------------------+

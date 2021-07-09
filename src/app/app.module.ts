@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { PdfViewerModule} from 'ng2-pdf-viewer';
 import { AppComponent } from './app.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { SimcheckComponent } from './simcheck/simcheck.component';
@@ -8,7 +9,7 @@ import {routing} from './app.routing';
 import { Routes, RouterModule} from '@angular/router';
 import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
 import {NgxCSVtoJSONModule} from 'ngx-csvto-json';
-import { ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // @ts-ignore
 import {ChartsModule} from 'ng2-charts';
 import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
@@ -19,6 +20,11 @@ import {NgCircleProgressModule} from 'ng-circle-progress';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LineChart3Component } from './line-chart3/line-chart3.component';
+import {NgxExtendedPdfViewerServerModule} from 'ngx-extended-pdf-viewer';
+import { CreditsComponent } from './credits/credits.component';
+import { PriceComponent } from './price/price.component';
+import { YieldComponent } from './yield/yield.component';
 
 
 // @ts-ignore
@@ -31,6 +37,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MyBarChartComponent,
     LineChartComponent,
     LineChart2Component,
+    LineChart3Component,
+    CreditsComponent,
+    PriceComponent,
+    YieldComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +63,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     }),
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-
+    PdfViewerModule,
+    FormsModule,
+    NgxExtendedPdfViewerServerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

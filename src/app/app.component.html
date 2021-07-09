@@ -1,52 +1,96 @@
 
 
-
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
 <html>
 
 <body>
 
 <br>
-<h1 style="font-family: Copperplate">Fresh Produce Forecasts</h1>
-<p style="font-family: Papyrus">A versatile application for price and yield forecasts.</p>
+<h1 style="font-family: Calibri">Web Portal for AI-based Tools for </h1>
+<h1 style="font-family: Calibri">  Fresh Produce Procurement Price Forecasting</h1>
+<!--<p style="font-family: Papyrus">A versatile application for price and yield forecasts.</p>-->
+<br>
 
 
 
-<a class="head-navbar" >
+<div class="bar">
+ <a  routerLink='/' routerLinkActive="active">HOME</a>
+  <ul>
+    <li>
+      <a>DATA-PREPROCESSING</a>
+      <ul>
+        <li><a routerLink='/interpolation' routerLinkActive="active">IMPUTATION</a></li>
+        <li><a routerLink='/simcheck' routerLinkActive="active">SIMILARITY CHECK</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a>FORECASTING</a>
+      <ul>
+        <li><a routerLink='/price' routerLinkActive="active">PRICE</a></li>
+        <li><a routerLink='/yield' routerLinkActive="active">YIELD</a></li>
+      </ul>
+    </li>
+  </ul>
 
-</a>
+<a routerLink='/credits' routerLinkActive="active">CREDITS</a>
+</div>
 
 
-
+<!--
 <ul>
   <li><a routerLink='/' routerLinkActive="active">HOME</a></li>
-  <li><a routerLink='/interpolation' routerLinkActive="active">INTERPOLATION</a></li>
+
+  <li><a routerLink='/interpolation' routerLinkActive="active" >DATA PREPROCESSING</a></li>
+
+ <li><a routerLink='/interpolation' routerLinkActive="active">IMPUTATION</a></li>
   <li><a routerLink='/simcheck' routerLinkActive="active">SIMILARITY CHECK</a></li>
   <li><a routerLink='/forecast' routerLinkActive="active">FORECASTING</a></li>
+  <li><a routerLink='/credits' routerLinkActive="active">CREDITS</a></li>
 
-</ul>
+
+
+</ul>-->
 
 <router-outlet></router-outlet>
 
 <section  class="de" *ngIf="isHomeRoute()">
-  <p1 style="background-color: gold" > This Application provides with the County level Price and Yield Forecasts of Fresh Produce (FP) in United States. It uses satellite
-    images, station based data for weather and soil or both as inputs for a particular county to complex Deep Learning (DL)
-    models to forecast the price and yield values of FP with minimal errors. This application can provide the forecasts for any county
-  across the United States. Apart from the forecasts, this application also helps in the interpolation of the time series with missing values and
-  also helps in comparing two or more time series by performing the similarity check.</p1>
-  <section class="des" *ngIf="isHomeRoute()">
-  </section>
-</section>
+  <p1 > This portal represents some of the research outcome of a project sponsored by Loblaws and NSERC CRD, and carried out by a research team at
+    the university of Waterloo, led by Professor Fakhri Karray, who holds a Loblaws Research Chair in AI. The context of the
+    research work is outlined below. The web application, which tackles forecasting of fresh produce yield and price using
+    deep learning is developed and implemented by the following researchers: Dr. Lobna Nassar, Mohita Chaudhary,
+    Mohamed Sadok Gastli, Muhammad Saad, Dr. Fatemeh Jafari.
+<br>
+    Loblaw Companies Limited (LCL), employing about 200,000 Canadians [$45B annual total revenue], supplies all fresh produce (FP) to their stores in South Western Ontario from
+    Waterloo Distribution Center (DC), extending west of highway 427 to the City of Windsor.
+<br>
+    LCL's food DCs are very large warehouses with many temperature zones for storing FP and are responsible for ordering and distributing to various store locations. Ordering depends mostly on the demand for FP, and the DC decides on prices and quantities to meet the demand. Adequately timed orders bring financial benefits to LCL and at the same time minimizes waste. For example, U.S. estimates an annual loss of 5.9 and 6.1 billion pounds for fresh fruit and fresh vegetables, respectively. Prices, however, depend on many factors that are affected by the diverse regions from which the FP is procured.
+    The factors may also be affected by high uncertainty due to environmental and socio-economic effects such as income, labor and other trade issues.
+    <img src="assets/fruit-stand-david-thompson.jpeg" style="width: 100%;height: 600px;margin: 0px;padding-bottom: 20px;padding-top: 20px"  *ngIf="isHomeRoute()">
+     Many of these factors are becoming even more uncertain from globalization and climate change, and hard to predict, making decisions on FP procurement prices and quantities an extremely challenging task. This important task is currently done based on immediate past prices of the same produce, which is too simplistic. Because of the great volume of transactions and monetary value (over $25B just for Loblaws FP), an improvement of even a micro cent in each FP transaction transfers to benefits of hundreds of millions of dollars each year for Canada. Additionally, fair prices bring prosperity all around from growers to consumers and to the general welfare of the regions involving in FP trades.
+    <br>
+    The urgent need and support of the LCL and the well-established research record of PIs at the University of Waterloo (UW) have provided a great opportunity to develop, test and employ advanced artificial intelligence (AI) and machine learning (ML) tools as a meaningful action towards improved FP "fair" procurement price offer and modeling, beneficial to both FP industry and welfare of the society.
+  </p1>
 
 
-</body>
 
-<footer class="foot">
-  <br>
-  <br>
-  <p style="font-family: 'Times New Roman'">Center for Pattern Analysis and Machine Intelligence <br>
-    University of Waterloo, Waterloo, ON, CA <br>
-    <a href="mailto:m38chaud@uwaterloo.ca">mohita.chaudhary@uwaterloo.ca</a></p>
+    </section>
 
-</footer>
 
-</html>
+    </body>
+
+    <footer class="foot">
+      <br>
+      <br>
+      <p style="font-family: 'Times New Roman'">Center for Pattern Analysis and Machine Intelligence <br>
+        University of Waterloo, Waterloo, ON, CA <br>
+        <a href="mailto:karray@uwaterloo.ca">karray@uwaterloo.ca</a></p>
+
+    </footer>
+
+    </html>
