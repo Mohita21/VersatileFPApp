@@ -1,10 +1,12 @@
 # Web Portal for AI-based Tools for Fresh Produce Procurement Price Forecasting
 
 The code for this Application is in two different repositories:
-1. Front-End Code:
-2. Back_End Code:
+1. [Front End Angular CLI Application Code](https://github.com/Mohita21/VersatileFPApp)
+2. [Back End Flask Application Code](https://github.com/Mohita21/Application_Backend)
 
-This project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7. This project has the front-end code for the application, **Web Portal for AI-based Tools for
+
+# Front End Angular CLI Application
+This front end project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7. This project has the front-end code for the application, **Web Portal for AI-based Tools for
 Fresh Produce Procurement Price Forecasting**.
 ## Description
 This project has the following components:
