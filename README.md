@@ -29,4 +29,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-[Portal Look](https://drive.google.com/drive/u/1/folders/1p8Fz8V3PffZCLOzwjDdJMiSrqJ_Pthu2)
+# Usage
+
+### Test Cases
+- Accessing the web application main modules and their sub functions: [DEMO](https://drive.google.com/file/d/1-qq7tB_gRA5vKEoJI1UaYQXC80P4fnnA/view?usp=sharing)
+- Imputing data files with random missing values and missing chunks: [DEMO](https://drive.google.com/file/d/1Wuf2P1eDXZap-0SHWL1T-ktGSOB_UAa4/view?usp=sharing)
+- Checking the binary and percentage similarity between two timeseries based on input, output, and relation of input to output parameters: [DEMO](https://drive.google.com/file/d/1jW792C7xWBWGZEW7px8OtpMiUUJAZaNq/view?usp=sharing)
