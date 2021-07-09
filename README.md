@@ -29,9 +29,23 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-# Usage
+## Usage
 
-### Test Cases
-- Accessing the web application main modules and their sub functions: [DEMO](https://drive.google.com/file/d/1-qq7tB_gRA5vKEoJI1UaYQXC80P4fnnA/view?usp=sharing)
-- Imputing data files with random missing values and missing chunks: [DEMO](https://drive.google.com/file/d/1Wuf2P1eDXZap-0SHWL1T-ktGSOB_UAa4/view?usp=sharing)
-- Checking the binary and percentage similarity between two timeseries based on input, output, and relation of input to output parameters: [DEMO](https://drive.google.com/file/d/1jW792C7xWBWGZEW7px8OtpMiUUJAZaNq/view?usp=sharing)
+
+Usage Case | Demonstration |
+--- | --- | 
+Accessing the web application main modules and their sub function | [DEMO](https://drive.google.com/file/d/1-qq7tB_gRA5vKEoJI1UaYQXC80P4fnnA/view?usp=sharing) | 
+|
+Imputing data files with random missing values and missing chunks | [DEMO](https://drive.google.com/file/d/1Wuf2P1eDXZap-0SHWL1T-ktGSOB_UAa4/view?usp=sharing) | 
+|
+Checking the binary and percentage similarity between two timeseries based on input, output, and relation of input to output parameters | [DEMO](https://drive.google.com/file/d/1jW792C7xWBWGZEW7px8OtpMiUUJAZaNq/view?usp=sharing) | 
+|
+Forecasting strawberry price 1 day ahead in Santa Maria using the Combined model | [DEMO](https://drive.google.com/file/d/1FT_z-0Xcl5FvRC9H5FMeJJhGnhCskTur/view?usp=sharing) | 
+|
+Forecasting Strawberry yield 1 week ahead in Santa Maria 1st July – 7th July 2019 using the Satellite images model | [DEMO](https://drive.google.com/file/d/14gK8pihbbIGbZwFNTUjRghPcpFp-Y7LO/view?usp=sharing) |
+|
+Forecasting Raspberry yield 2 weeks ahead in Santa Maria 1st July – 15th July 2019 using the Satellite images model (transfer learning is applied) | [DEMO](https://drive.google.com/file/d/1wAViRhblL9wrtIt1fm-DeDxVEUkkQhj_/view?usp=sharing) |
+|
+Forecasting Raspberry yield 3 weeks ahead in Santa Maria 1st July – 21st July 2019 using the Combined model (transfer learning is applied) | [DEMO](https://drive.google.com/file/d/1hAXYftOst2uNwX9Ga0gw3rpWtX7aQcCO/view?usp=sharing) |
+|
+Forecasting Blueberry yield 3 weeks ahead in Santa Maria 1st July – 21st July 2019 using the Satellite images model | [DEMO](https://drive.google.com/file/d/1pdedRBak-u3F1N1fPRfL8qfmaQ83j9Vq/view?usp=sharing) |
