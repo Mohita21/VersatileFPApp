@@ -20,6 +20,8 @@ This project has the following components:
 - interpolation: The component for imputation of time series.
 - linechart: The component for generating line chart on the web page.
 - credits: The component for displaying credits.
+
+
 **Development Server**
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
