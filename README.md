@@ -41,7 +41,22 @@ This part of code has the backend code for the Angular Application named
     - *Price Forecasting:* This module forecasts the price values using station-based, satellite-based and combined deep learning models.
     - *Yield Forecasting:* This module forecasts the yield values using station-based, satellite-based and combined deep learning models.
 
-  
+**Authenticating Satellite Images access:**  
+The general framework of using satellite images is as follows:
+1. The application, with access through an authenticated Google account, requests a set of satellite images for specified dates.
+2. The requested images are uploaded onto the Google account's Google Drive.
+3. The application then downloads the images from Google Drive and proceeds with processing and forecasting.
+
+It should be noted that the GEE is used under the free license granted for non-profit educational and research institutions, commercial use would require obtaining the relevant license.
+
+In order to be able to request and download satellite images from Google Earth Engine (GEE), authentication has to be made through a Google account. I have created a Google account with set API configurations to request images from GEE and download them from Google Drive.
+For initial setup, through the backend of the application software (Python), a function called "ee.Authenticate()" must be run which will redirect the user to a Google Account sign-in page where they can use the following email and password:
+
+Email: app.gee.images@gmail.com
+
+Password: images123
+
+This will redirect them to a page the provides an authentication code that they must copy and paste into the python terminal waiting for an input. After this is done, it should save an authentication token for future uses and the user no longer needs to use the "ee.Authenticate()" function.
 
 **Running the code:**
 Run the *FlaskApp_Main.py* file in the Application folder to serve the Flask Application.
