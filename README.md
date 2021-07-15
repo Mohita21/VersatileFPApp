@@ -23,14 +23,15 @@ The [combined ensemble forecasting module](https://github.com/Mohita21/Versatile
 
 
 ## Installation
-Install any IDE like PyCharm or Visual Studio Code to run the python fiels for serving the 
+
+#### Requirements
+Install any IDE like PyCharm or Visual Studio Code to run the python files for serving the 
 flask application backend code.
 
-The code for this Application is in two different repositories:
+The code for this application is aailable in two different repositories:
 1. [Front End Angular CLI Application Code](https://github.com/Mohita21/VersatileFPApp)
 2. [Back End Flask Application Code](https://github.com/Mohita21/Application_Backend)
 
-#### Requirements
 
 #### Front End Angular CLI Application
 This front end project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7. This project has the front-end code for the application, **Web Portal for AI-based Tools for Fresh Produce Procurement Price Forecasting**.
@@ -141,4 +142,5 @@ The back end is developed by:
 - Mohamed Sadok: developed forecasting submodules based on satellite images and combined data using Python 
 - Fatemeh Jaafari: developed FP similarity module using Python  
 - Muhammad Saad: developed Imputation module using Python
+
 For additional information on the project, its members or its sponsors, please contact the project’s principal investigator Fakhri Karray at karray@uwaterloo.ca
