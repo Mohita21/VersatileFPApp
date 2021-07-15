@@ -19,7 +19,7 @@ The similarity check module on the other hand can check the similarity needed fo
 - Satellite Images Models: used to forecast 4 weeks ahead since station data is weekly updated.
 - Ensemble Models Combining Station Based and Satellite Images Models: used to forecast 4 weeks ahead since station data is daily updated.
 
-The combined ensemble forecasting module is the best performing module especially for forecasting strawberry prices in Santa Maria California for 5 weeks ahead; Sample output of the five weeks ahead forecasted vs. true prices for July 2019 
+The [combined ensemble forecasting module](https://github.com/Mohita21/VersatileFPApp/blob/2d681427bbcf1f71f86e3098d196992978818818/Figures/The%20Proposed%20Solution.jpg) is the best performing module especially for forecasting strawberry prices in Santa Maria California for 5 weeks ahead; Sample output of the [five weeks ahead forecasted vs. true prices for July 2019](https://github.com/Mohita21/VersatileFPApp/blob/2d681427bbcf1f71f86e3098d196992978818818/Figures/SM%20Strawberry%20Price%205W.jpg).
 
 
 ## Installation
@@ -124,7 +124,7 @@ Future releases should:
 3. Enhance the Robustness: 
     - The system validates all user inputs to avoid crashing wrong information; like entering end date beyond the 5 weeks horizon for 5 weeks ahead model.
     - The Similarity module code breaks in backend on generating the pdfs for time series.
-4. The yield forecasting is considered as a tentative indication of the price but since the yield is observed to fluctuate steeper than the price and given that deep learning models are not the best in detecting such fluctuations, a potential future work is to improve the models’ ability to capture steep fluctuations. The best performing module sample output of the five weeks ahead forecasted vs. fluctuating true yields for July 2019 shows how the forecasted yield is much smoother than the true yield.
+4. The yield forecasting is considered as a tentative indication of the price but since [the yield is observed to fluctuate steeper than the price](https://github.com/Mohita21/VersatileFPApp/blob/2d681427bbcf1f71f86e3098d196992978818818/Figures/p%20vs%20y.jpg) and given that deep learning models are not the best in detecting such fluctuations, a potential future work is to improve the models’ ability to capture steep fluctuations. The best performing module sample output of the [five weeks ahead forecasted vs. fluctuating true yields for July 2019](https://github.com/Mohita21/VersatileFPApp/blob/2d681427bbcf1f71f86e3098d196992978818818/Figures/SM%20Strawberry%20Yield%205W.jpg) shows how the forecasted yield is much smoother than the true yield.
 5. Efficiently generalizing the application using transfer learning to forecast yields and prices of FPs similar to strawberries with minimal retraining.
 
 
