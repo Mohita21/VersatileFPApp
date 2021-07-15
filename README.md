@@ -1,5 +1,27 @@
 # Web Portal for AI-based Tools for Fresh Produce Procurement Price Forecasting
 
+## Description
+This is a price forecasting web application which provides two main modules: one for data preprocessing and the second is for forecasting. 
+
+#### Module 1: Data Preprocessing
+This module has two submodules one for imputing missing values and the other for checking the similarity between two timeseries.
+Imputation Option:
+The Imputation submodule has two options: the first is applied in case of random missing values are encountered and the second in case the file has chunks of missing values.
+- Random Missing 
+- Missing Chunks
+Similarity Check Option:
+The similarity check module on the other hand can check the similarity needed for deciding the validity of the application of transfer learning among the crop forecasting models. The similarity check can be based on the similarity of the input parameters to the forecasting model (county conditions), the output parameters (yield or price), and the relationship between input and output.
+- Input based (county conditions)
+- Output Based (yield or price)
+- Input-output based (relation of the county conditions to both yield and price)
+#### Module 2: Forecasting FP yield and price 
+- Station Based Models: used to forecast 5 weeks ahead since station data is daily updated. 
+- Satellite Images Models: used to forecast 4 weeks ahead since station data is weekly updated.
+- Ensemble Models Combining Station Based and Satellite Images Models: used to forecast 4 weeks ahead since station data is daily updated.
+
+The combined ensemble forecasting module is the best performing module especially for forecasting strawberry prices in Santa Maria California for 5 weeks ahead; Sample output of the five weeks ahead forecasted vs. true prices for July 2019 
+
+
 ## Installation
 Install any IDE like PyCharm or Visual Studio Code to run the python fiels for serving the 
 flask application backend code.
@@ -8,7 +30,7 @@ The code for this Application is in two different repositories:
 1. [Front End Angular CLI Application Code](https://github.com/Mohita21/VersatileFPApp)
 2. [Back End Flask Application Code](https://github.com/Mohita21/Application_Backend)
 
-
+#### Requirements
 
 #### Front End Angular CLI Application
 This front end project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7. This project has the front-end code for the application, **Web Portal for AI-based Tools for Fresh Produce Procurement Price Forecasting**.
@@ -41,22 +63,22 @@ This part of code has the backend code for the Angular Application named
     - *Price Forecasting:* This module forecasts the price values using station-based, satellite-based and combined deep learning models.
     - *Yield Forecasting:* This module forecasts the yield values using station-based, satellite-based and combined deep learning models.
 
-**Authenticating Satellite Images access:**  
-The general framework of using satellite images is as follows:
+**Using satellite images:**  
 1. The application, with access through an authenticated Google account, requests a set of satellite images for specified dates.
 2. The requested images are uploaded onto the Google account's Google Drive.
 3. The application then downloads the images from Google Drive and proceeds with processing and forecasting.
 
 It should be noted that the GEE is used under the free license granted for non-profit educational and research institutions, commercial use would require obtaining the relevant license.
 
-In order to be able to request and download satellite images from Google Earth Engine (GEE), authentication has to be made through a Google account. I have created a Google account with set API configurations to request images from GEE and download them from Google Drive.
-For initial setup, through the backend of the application software (Python), a function called "ee.Authenticate()" must be run which will redirect the user to a Google Account sign-in page where they can use the following email and password:
+**Requesting and downloading satellite images:**  
+- To be able to request and download satellite images from Google Earth Engine (GEE), authentication must be made through a Google account. A Google account is created with set API configurations to request images from GEE and download them from Google Drive.
+- For initial setup, through the backend of the application software (Python), a function called "ee.Authenticate()" must be run which will redirect the user to a Google account sign-in page where the following email and password can be used to access the page that provides an authentication code that they must copy and paste into the Python terminal waiting for an input:
 
-Email: app.gee.images@gmail.com
+    - Email: app.gee.images@gmail.com
 
-Password: images123
+    - Password: images123
 
-This will redirect them to a page the provides an authentication code that they must copy and paste into the python terminal waiting for an input. After this is done, it should save an authentication token for future uses and the user no longer needs to use the "ee.Authenticate()" function.
+- An authentication token is then saved for future uses and the user no longer needs to use the "ee.Authenticate()" function.
 
 **Running the code:**
 Run the *FlaskApp_Main.py* file in the Application folder to serve the Flask Application.
@@ -75,6 +97,10 @@ Run the *FlaskApp_Main.py* file in the Application folder to serve the Flask App
 
 ## Usage
 
+### Support
+For help an email address: Fakhri Karray <karray@uwaterloo.ca>
+
+### Usage Cases
 
 Usage Case | Demonstration |
 --- | --- | 
@@ -86,3 +112,33 @@ Forecasting Strawberry yield 1 week ahead in Santa Maria 1st July – 7th July 2
 Forecasting Raspberry yield 2 weeks ahead in Santa Maria 1st July – 15th July 2019 using the Satellite images model (transfer learning is applied) | [DEMO](https://drive.google.com/file/d/1wAViRhblL9wrtIt1fm-DeDxVEUkkQhj_/view?usp=sharing) |
 Forecasting Raspberry yield 3 weeks ahead in Santa Maria 1st July – 21st July 2019 using the Combined model (transfer learning is applied) | [DEMO](https://drive.google.com/file/d/1hAXYftOst2uNwX9Ga0gw3rpWtX7aQcCO/view?usp=sharing) |
 Forecasting Blueberry yield 3 weeks ahead in Santa Maria 1st July – 21st July 2019 using the Satellite images model | [DEMO](https://drive.google.com/file/d/1pdedRBak-u3F1N1fPRfL8qfmaQ83j9Vq/view?usp=sharing) |
+
+### Roadmap
+Future releases should:
+1. Overcome the current limitations faced by the Satellite images module:
+    - The training for the satellite images TL models is limited to 2 years data to reduce run time. Even if more than 2 years data is uploaded, only the 2 latest years are used for training.
+    - The application sometimes fails to download the images from google drive despite the soundness of the used code; restarting the application is needed to fix such issue.
+2. Enhance the optimization of: 
+    - The Similarity code module Similarity_Input_Output function and generating the pdfs in the detailed analysis. 
+    - Downloading and processing satellite image for future forecasts.
+3. Enhance the Robustness: 
+    - The system validates all user inputs to avoid crashing wrong information; like entering end date beyond the 5 weeks horizon for 5 weeks ahead model.
+    - The Similarity module code breaks in backend on generating the pdfs for time series.
+4. The yield forecasting is considered as a tentative indication of the price but since the yield is observed to fluctuate steeper than the price and given that deep learning models are not the best in detecting such fluctuations, a potential future work is to improve the models’ ability to capture steep fluctuations. The best performing module sample output of the five weeks ahead forecasted vs. fluctuating true yields for July 2019 shows how the forecasted yield is much smoother than the true yield.
+5. Efficiently generalizing the application using transfer learning to forecast yields and prices of FPs similar to strawberries with minimal retraining.
+
+
+### Authors and acknowledgement
+Warm thanks for the CPAMI researchers who have developed the current portal, which is the outcome of several Master and Doctoral theses. The researchers who contributed to the design and implementation of the web application are credited here:
+
+**Analysis & Design:** Lobna Nassar, Mohita Chaudhary, Mohamed Sadok, Muhammad Saad, Fatemeh Jefri
+
+**Implementation:**
+
+The front-end or interface developed by Mohita using Angular CLI which includes HTML, CSS and TypeScript
+The back end is developed by:
+- Mohita Chaudhary: integrated system modules with front end and developed forecasting submodules based on station based & combined data using Python and Flask Framework
+- Mohamed Sadok: developed forecasting submodules based on satellite images and combined data using Python 
+- Fatemeh Jaafari: developed FP similarity module using Python  
+- Muhammad Saad: developed Imputation module using Python
+For additional information on the project, its members or its sponsors, please contact the project’s principal investigator Fakhri Karray at karray@uwaterloo.ca
