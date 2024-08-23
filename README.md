@@ -96,10 +96,6 @@ Run the *FlaskApp_Main.py* file in the Application folder to serve the Flask App
 - *client_secrets.json*, *mycreds.txt*: These files have credentials required for google drive authentication to access the satellite images.
 
 
-## Usage
-
-### Support
-For help an email address: Fakhri Karray <karray@uwaterloo.ca>
 
 ### Usage Cases
 
@@ -143,4 +139,3 @@ The back end is developed by:
 - Fatemeh Jaafari: developed FP similarity module using Python  
 - Muhammad Saad: developed Imputation module using Python
 
-For additional information on the project, its members or its sponsors, please contact the project’s principal investigator Fakhri Karray at karray@uwaterloo.ca
